@@ -29,7 +29,12 @@ export async function buildDesktopUI(output = join(root, 'dist', 'desktop-ui')) 
     },
   });
   await mkdir(output, { recursive: true });
-  for (const file of ['index.html', 'styles.css', 'Geist-Variable.woff2'])
+  for (const file of [
+    'index.html',
+    'styles.css',
+    'Geist-Variable.woff2',
+    'BarlowCondensed-SemiBold.woff2',
+  ])
     await cp(join(root, 'desktop', 'ui', file), join(output, file));
 }
 

@@ -19,9 +19,14 @@ export function setupResource(value) {
       !url.username &&
       !url.password &&
       !url.port &&
-      ['/index.html', '/setup.js', '/setup.css', '/styles.css', '/Geist-Variable.woff2'].includes(
-        url.pathname,
-      )
+      [
+        '/index.html',
+        '/setup.js',
+        '/setup.css',
+        '/styles.css',
+        '/Geist-Variable.woff2',
+        '/BarlowCondensed-SemiBold.woff2',
+      ].includes(url.pathname)
     )
       return url.pathname.slice(1);
   } catch {}

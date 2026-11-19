@@ -375,19 +375,19 @@
   gap: 5px;
   width: 27%;
   padding: 18px 8px 8px;
-  background: #f1f1f1;
+  background: #f4f6fb;
 }
 .account-theme-scene > i em {
   display: block;
   width: 70%;
   height: 4px;
   border-radius: 4px;
-  background: #ccc;
+  background: #d0d6e6;
 }
 .account-theme-scene > i em:first-child {
   width: 8px;
   height: 8px;
-  border: 2px solid #333;
+  border: 2px solid #20263d;
   border-radius: 50%;
   background: transparent;
   margin-bottom: 8px;
@@ -404,13 +404,13 @@
   height: 5px;
   width: 74%;
   border-radius: 8px;
-  background: #e6e6e6;
+  background: #e6eaf3;
 }
 .account-theme-scene b:first-child {
   height: 12px;
   width: 52%;
   margin: 0 0 4px auto;
-  background: #ffd0de;
+  background: #fecdd3;
 }
 .account-theme-scene b:nth-child(3) {
   width: 50%;
@@ -418,27 +418,27 @@
 .account-theme-scene > span > em {
   height: 12px;
   margin-top: auto;
-  border: 1px solid #ddd;
+  border: 1px solid #dde2ee;
   border-radius: 8px;
 }
 .account-theme-scene.dark {
-  background: #242424;
+  background: #1c1f3d;
 }
 .account-theme-scene.dark > i {
-  background: #191919;
+  background: #14162e;
 }
 .account-theme-scene.dark > i em:first-child {
-  border-color: #ccc;
+  border-color: #ecedfb;
 }
 .account-theme-scene.dark > i em,
 .account-theme-scene.dark b {
-  background: #555;
+  background: #3d4567;
 }
 .account-theme-scene.dark b:first-child {
-  background: #782844;
+  background: #4c1136;
 }
 .account-theme-scene.dark > span > em {
-  border-color: #666;
+  border-color: #3d4567;
 }
 .account-theme-sample.system .account-theme-scene.dark {
   clip-path: polygon(55% 0, 100% 0, 100% 100%, 40% 100%);

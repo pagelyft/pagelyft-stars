@@ -1,36 +1,46 @@
 :root {
   color-scheme: light;
-  --white: #fafafa;
-  --black: #191919;
+  /*
+   * PageLyft palette. The neutrals lean indigo and end on the brand's dark
+   * ground (#14162e, #1c1f3d, #282c52); the pinks are the brand rose family.
+   * Names stay as upstream has them so page styles keep working unchanged.
+   */
+  --white: #fbfcfe;
+  --black: #14162e;
+  --ink: #20263d;
+  --mist: #ecedfb;
   --gray-0: #fff;
-  --gray-10: #f8f8f8;
-  --gray-15: #f1f1f1;
-  --gray-20: #eaeaea;
-  --gray-25: #e0e0e0;
-  --gray-30: #d6d6d6;
-  --gray-40: #bfbfbf;
-  --gray-50: #a4a4a4;
-  --gray-60: #868686;
-  --gray-70: #676767;
-  --gray-80: #464646;
-  --gray-85: #353535;
-  --gray-90: #242424;
-  --pink-10: #ffe8ec;
-  --pink-20: #ffd0d9;
-  --pink-30: #ffbcca;
-  --brand-pink: #ff91ac;
-  --pink-70: #87003c;
-  --pink-80: #5a0026;
+  --gray-10: #f8f9fd;
+  --gray-15: #f4f6fb;
+  --gray-20: #e6eaf3;
+  --gray-25: #dde2ee;
+  --gray-30: #d0d6e6;
+  --gray-40: #b7bed4;
+  --gray-50: #99a1bc;
+  --gray-60: #7c85a3;
+  --gray-70: #5b6485;
+  --gray-80: #3d4567;
+  --gray-85: #282c52;
+  --gray-90: #1c1f3d;
+  --pink-10: #ffe4e6;
+  --pink-20: #fecdd3;
+  --pink-30: #fda4af;
+  --pink-50: #fb7185;
+  --brand-pink: #ff004f;
+  --pink-60: #e60046;
+  --pink-70: #be123c;
+  --pink-80: #881337;
+  --pink-90: #4c1136;
   --background: var(--white);
   --canvas: var(--background);
-  --sidebar: #f5f5f5;
+  --sidebar: var(--gray-15);
   --surface: var(--gray-0);
   --surface-overlay: var(--gray-0);
   --surface-subtle: var(--gray-15);
   --surface-inset: var(--gray-20);
   --hover: var(--gray-20);
-  --nav-hover: color-mix(in srgb, var(--accent-soft) 60%, transparent);
-  --foreground: var(--black);
+  --nav-hover: var(--hover);
+  --foreground: var(--ink);
   --text-secondary: var(--gray-80);
   --muted-foreground: var(--gray-70);
   --placeholder: var(--muted-foreground);
@@ -39,12 +49,12 @@
   --accent-border: var(--pink-30);
   --link: var(--accent);
   --link-hover: var(--pink-80);
-  --primary: var(--brand-pink);
-  --primary-hover: var(--pink-20);
-  --primary-pressed: var(--pink-30);
-  --primary-foreground: var(--black);
+  --primary: var(--pink-60);
+  --primary-hover: color-mix(in srgb, var(--primary) 88%, var(--black));
+  --primary-pressed: color-mix(in srgb, var(--primary) 76%, var(--black));
+  --primary-foreground: var(--gray-0);
   --chat-sent: var(--pink-20);
-  --chat-sent-foreground: var(--black);
+  --chat-sent-foreground: var(--ink);
   --control: var(--gray-15);
   --control-hover: var(--gray-10);
   --control-foreground: var(--foreground);
@@ -62,17 +72,17 @@
   --focus-halo: 0 0 0 4px color-mix(in srgb, var(--primary) 16%, transparent);
   --selection: var(--pink-20);
   --dot-grid: var(--gray-30);
-  --destructive: #ad2943;
-  --destructive-hover: #922139;
+  --destructive: #be3345;
+  --destructive-hover: #a32a3a;
   --on-solid: var(--white);
-  --error: #a52842;
-  --error-soft: #fff0f2;
-  --success: #276346;
-  --success-soft: #eaf5ee;
-  --warning: #82551c;
-  --warning-soft: #fbf1df;
-  --info: #6551a5;
-  --info-soft: #f0edf9;
+  --error: #be3345;
+  --error-soft: #fdecef;
+  --success: #0f7555;
+  --success-soft: #e3f5ee;
+  --warning: #8f5a08;
+  --warning-soft: #fbf1dc;
+  --info: #2563bb;
+  --info-soft: #e8f0fb;
   --chart-1: var(--brand-pink);
   --chart-2: var(--gray-70);
   --chart-3: var(--pink-70);
@@ -83,7 +93,7 @@
   --chart-8: var(--gray-50);
   --chart-9: var(--pink-20);
   --chart-10: var(--gray-60);
-  --chart-11: #44001b;
+  --chart-11: #4c0519;
   --chart-12: var(--gray-30);
   --chart-line-1: var(--pink-70);
   --chart-line-2: var(--gray-70);
@@ -108,6 +118,7 @@
   --input-height: 40px;
   --menu-radius: 12px;
   --menu-item-radius: 8px;
+  --font-display: 'Barlow Condensed', 'Geist', system-ui, sans-serif;
   --text-body: 16px;
   --text-control: 14px;
   --text-title: 32px;
@@ -125,20 +136,20 @@
   color-scheme: dark;
   --link-hover: var(--pink-20);
   --background: var(--black);
-  --sidebar: #1f1f1f;
+  --sidebar: #181b37;
   --surface: var(--gray-90);
   --surface-overlay: var(--gray-85);
   --surface-subtle: var(--gray-90);
   --surface-inset: var(--gray-85);
   --hover: var(--gray-85);
-  --foreground: var(--white);
+  --foreground: var(--mist);
   --text-secondary: var(--gray-30);
   --muted-foreground: var(--gray-40);
-  --accent: var(--brand-pink);
-  --accent-soft: var(--pink-80);
+  --accent: var(--pink-50);
+  --accent-soft: var(--pink-90);
   --accent-border: var(--pink-70);
-  --chat-sent: var(--pink-80);
-  --chat-sent-foreground: var(--white);
+  --chat-sent: var(--pink-90);
+  --chat-sent-foreground: var(--mist);
   --control: color-mix(in srgb, var(--white) 12%, transparent);
   --control-hover: color-mix(in srgb, var(--white) 20%, transparent);
   --control-active: color-mix(in srgb, var(--white) 16%, transparent);
@@ -148,17 +159,17 @@
   --switch-off: var(--gray-60);
   --switch-thumb: var(--black);
   --border: var(--gray-85);
-  --ring: var(--brand-pink);
+  --ring: var(--pink-50);
   --selection: var(--pink-80);
   --dot-grid: var(--gray-80);
-  --error: #ffacb9;
-  --error-soft: #3d252e;
-  --success: #96d6b0;
-  --success-soft: #23372d;
-  --warning: #e8c38e;
-  --warning-soft: #3a3023;
-  --info: #c5b5f5;
-  --info-soft: #312b42;
+  --error: #f87171;
+  --error-soft: #382539;
+  --success: #4ade80;
+  --success-soft: #1d363b;
+  --warning: #fbbf24;
+  --warning-soft: #39312c;
+  --info: #38bdf8;
+  --info-soft: #1a314e;
   --chart-2: var(--gray-40);
   --chart-3: var(--pink-30);
   --chart-4: var(--gray-70);
@@ -169,7 +180,7 @@
   --chart-10: var(--gray-30);
   --chart-11: var(--pink-10);
   --chart-12: var(--gray-60);
-  --chart-line-1: var(--brand-pink);
+  --chart-line-1: var(--pink-50);
   --chart-line-2: var(--gray-40);
   --chart-line-3: var(--pink-30);
   --overlay: color-mix(in srgb, var(--black) 72%, transparent);
@@ -192,4 +203,37 @@
 body {
   color: var(--foreground);
   background: var(--canvas);
+}
+
+/*
+ * PageLyft sets titles in Barlow Condensed and keeps it at 20px and up, where
+ * the narrow letters stay easy to read. Smaller headings, the Nod wordmark,
+ * figures and anything the owner or the model wrote stay in the body face.
+ * `:root` lifts these above the rules they restyle, whichever file loads last.
+ */
+:root
+  :is(
+    .page-heading h1,
+    .welcome h2,
+    .dialog-heading h2,
+    .dialog-content > h2,
+    .server-access-header h1,
+    .setup-progress-message h1,
+    .credential-card h1,
+    .vault-hero-title,
+    .settings-sidebar h1,
+    .settings-category > h2,
+    .app-manage-heading h2,
+    .app-connect-heading h2,
+    .app-discovery-heading h2,
+    .feedback-header h2,
+    .chat-search-dialog h2,
+    .schedule-editor-dialog > h2,
+    .schedule-empty h2,
+    .privacy-document > h1,
+    .privacy-content h2
+  ) {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0;
 }

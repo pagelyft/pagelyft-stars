@@ -284,5 +284,5 @@ See [Install from source](https://nod.n8n.io/docs/get-started/install-from-sourc
 </p>
 
 <p align="center">
-  <sub>Copyright 2026 n8n GmbH · <a href="LICENSE">Apache License 2.0</a> · <a href="NOTICE">Notice</a><br />Bundled third-party assets keep their own terms: <a href="public/fonts/Geist-OFL.txt">Geist</a>, <a href="public/logos/SOURCES.md">provider logos</a>,<br />and the desktop runtime components listed in the app's licenses/COMPONENTS.md.</sub>
+  <sub>Copyright 2026 n8n GmbH · <a href="LICENSE">Apache License 2.0</a> · <a href="NOTICE">Notice</a><br />Bundled third-party assets keep their own terms: <a href="public/fonts/Geist-OFL.txt">Geist</a>, <a href="public/fonts/BarlowCondensed-OFL.txt">Barlow Condensed</a>, <a href="public/logos/SOURCES.md">provider logos</a>,<br />and the desktop runtime components listed in the app's licenses/COMPONENTS.md.</sub>
 </p>

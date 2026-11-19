@@ -22,16 +22,16 @@ html,body{margin:0;height:100%;background:transparent;overflow:hidden}
 
 const pillPage = `<!doctype html><html><head><meta charset="utf-8"><style>
 html,body{margin:0;height:100%;background:transparent;overflow:hidden;font:500 13px/1 -apple-system,BlinkMacSystemFont,system-ui,'Segoe UI',sans-serif}
-.pill{box-sizing:border-box;height:40px;margin:4px auto;display:flex;align-items:center;gap:10px;padding:0 6px 0 14px;width:max-content;max-width:372px;border-radius:20px;background:#fff;color:#1a1a1a;box-shadow:0 0 0 1px rgba(255,145,172,.9),0 6px 18px rgba(135,0,60,.25)}
-.dot{width:8px;height:8px;border-radius:50%;background:#ff5c8a;animation:pulse 1.2s ease-in-out infinite}
+.pill{box-sizing:border-box;height:40px;margin:4px auto;display:flex;align-items:center;gap:10px;padding:0 6px 0 14px;width:max-content;max-width:372px;border-radius:20px;background:#fff;color:#20263d;box-shadow:0 0 0 1px rgba(255,0,79,.7),0 6px 18px rgba(20,22,46,.25)}
+.dot{width:8px;height:8px;border-radius:50%;background:#ff004f;animation:pulse 1.2s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.35}}
 @media (prefers-reduced-motion:reduce){.dot{animation:none}}
 .quiet .dot{animation:none;opacity:.8}
 .text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-button{font:inherit;border:0;border-radius:14px;height:28px;padding:0 12px;background:#ff91ac;color:#1a1a1a;cursor:pointer;display:flex;align-items:center;gap:6px}
-button:hover{background:#ffbcca}
+button{font:inherit;border:0;border-radius:14px;height:28px;padding:0 12px;background:#e60046;color:#fff;cursor:pointer;display:flex;align-items:center;gap:6px}
+button:hover{background:#cd0343}
 kbd{font:inherit;opacity:.6}
-@media (prefers-color-scheme:dark){.pill{background:#1f1f1f;color:#f5f5f5}}
+@media (prefers-color-scheme:dark){.pill{background:#1c1f3d;color:#ecedfb}}
 </style></head><body><div class="pill"><span class="dot"></span><span class="text" id="text"></span><button id="stop">Stop <kbd>${stopLabel}</kbd></button></div>
 <script>
 document.getElementById('stop').addEventListener('click',()=>{document.title='stop-'+Date.now()});

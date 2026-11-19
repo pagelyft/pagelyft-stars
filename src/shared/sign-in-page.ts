@@ -13,7 +13,7 @@ export function signInPage(succeeded: boolean, nonce: string, provider?: 'ChatGP
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${succeeded ? 'Signed in' : 'Sign-in failed'} · Nod</title>
   <style nonce="${nonce}">
-    :root { color-scheme: light dark; --background: #fdfcfe; --foreground: #211c28; --muted: #6d6273; }
+    :root { color-scheme: light dark; --background: #fbfcfe; --foreground: #20263d; --muted: #5b6485; }
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100svh; display: grid; place-items: center; padding: 32px 24px; background: var(--background); color: var(--foreground); font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
     main { width: min(100%, 400px); text-align: center; }
@@ -21,15 +21,15 @@ export function signInPage(succeeded: boolean, nonce: string, provider?: 'ChatGP
     .brand svg { width: 36px; height: 36px; }
     h1 { margin: 0 0 12px; font-size: 28px; font-weight: 600; letter-spacing: -.8px; line-height: 1.2; }
     p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
-    button { margin-top: 24px; border: 0; border-radius: 999px; padding: 12px 20px; background: #ff91ac; color: #191919; font: inherit; cursor: pointer; }
-    button:hover { background: #ffd0d9; }
+    button { margin-top: 24px; border: 0; border-radius: 999px; padding: 12px 20px; background: #e60046; color: #fff; font: inherit; cursor: pointer; }
+    button:hover { background: #cd0343; }
     button:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-    @media (prefers-color-scheme: dark) { :root { --background: #1e1b21; --foreground: #f5f1f6; --muted: #ada4b6; } }
+    @media (prefers-color-scheme: dark) { :root { --background: #14162e; --foreground: #ecedfb; --muted: #b7bed4; } }
   </style>
 </head>
 <body>
   <main aria-labelledby="title">
-    <div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="4"/><circle cx="25" cy="6" r="4" fill="#ff91ac"/></svg><span>Nod</span></div>
+    <div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="4"/><circle cx="25" cy="6" r="4" fill="#ff004f"/></svg><span>Nod</span></div>
     <h1 id="title">${succeeded ? `${provider ?? 'Your model'} is connected` : 'Sign-in didn’t finish'}</h1>
     <p>${succeeded ? 'You can close this tab and return to Nod.' : 'Return to Nod and try connecting again.'}</p>
     ${succeeded ? '<button type="button" id="close">Close page</button>' : ''}

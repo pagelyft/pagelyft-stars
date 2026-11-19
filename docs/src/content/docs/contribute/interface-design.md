@@ -7,7 +7,7 @@ sidebar:
 
 This page lists the design rules for Nod's web and desktop interface, and how to check a UI change before you open a pull request.
 
-Nod follows the [n8n brand system](https://guidelines.n8n.design/): neutral gray surfaces, pink primary actions and clear text. Nod keeps its own symbol. It's a product mark, not a copy of the n8n logo.
+This build of Nod follows the PageLyft brand: indigo-tinted surfaces, rose primary actions, Barlow Condensed titles and clear text. The dark theme sits on PageLyft's indigo ground. Nod keeps its own symbol.
 
 ## Keep it simple
 
@@ -25,23 +25,23 @@ Chat is the main work area. Tasks, schedules, apps, channels and the Vault suppo
 
 The palette lives in [`src/web/theme.css`](https://github.com/n8n-io/nod/blob/main/src/web/theme.css). Page styles use its variables. Don't add page-specific colors.
 
-| Role                 | Variable                 | Light                    | Dark                  |
-| -------------------- | ------------------------ | ------------------------ | --------------------- |
-| Canvas               | `--background`           | `--white` (#fafafa)      | `--black` (#191919)   |
-| Sidebar              | `--sidebar`              | #f5f5f5                  | #1f1f1f               |
-| Raised surface       | `--surface`              | `--gray-0` (#fff)        | `--gray-90` (#242424) |
-| Inset surface        | `--surface-inset`        | `--gray-20` (#eaeaea)    | `--gray-85` (#353535) |
-| Main text            | `--foreground`           | `--black`                | `--white`             |
-| Secondary text       | `--text-secondary`       | `--gray-80` (#464646)    | `--gray-30` (#d6d6d6) |
-| Muted text           | `--muted-foreground`     | `--gray-70` (#676767)    | `--gray-40` (#bfbfbf) |
-| Primary action       | `--primary`              | `--brand-pink` (#ff91ac) | `--brand-pink`        |
-| Text on primary      | `--primary-foreground`   | `--black`                | `--black`             |
-| Selected surface     | `--accent-soft`          | `--pink-10` (#ffe8ec)    | `--pink-80` (#5a0026) |
-| Link and focus       | `--link`, `--ring`       | `--pink-70` (#87003c)    | `--brand-pink`        |
-| Sent message         | `--chat-sent`            | `--pink-20` (#ffd0d9)    | `--pink-80`           |
-| Text on sent message | `--chat-sent-foreground` | `--black`                | `--white`             |
+| Role                 | Variable                 | Light                 | Dark                  |
+| -------------------- | ------------------------ | --------------------- | --------------------- |
+| Canvas               | `--background`           | `--white` (#fbfcfe)   | `--black` (#14162e)   |
+| Sidebar              | `--sidebar`              | `--gray-15` (#f4f6fb) | #181b37               |
+| Raised surface       | `--surface`              | `--gray-0` (#fff)     | `--gray-90` (#1c1f3d) |
+| Inset surface        | `--surface-inset`        | `--gray-20` (#e6eaf3) | `--gray-85` (#282c52) |
+| Main text            | `--foreground`           | `--ink` (#20263d)     | `--mist` (#ecedfb)    |
+| Secondary text       | `--text-secondary`       | `--gray-80` (#3d4567) | `--gray-30` (#d0d6e6) |
+| Muted text           | `--muted-foreground`     | `--gray-70` (#5b6485) | `--gray-40` (#b7bed4) |
+| Primary action       | `--primary`              | `--pink-60` (#e60046) | `--pink-60`           |
+| Text on primary      | `--primary-foreground`   | `--gray-0`            | `--gray-0`            |
+| Selected surface     | `--accent-soft`          | `--pink-10` (#ffe4e6) | `--pink-90` (#4c1136) |
+| Link and focus       | `--link`, `--ring`       | `--pink-70` (#be123c) | `--pink-50` (#fb7185) |
+| Sent message         | `--chat-sent`            | `--pink-20` (#fecdd3) | `--pink-90`           |
+| Text on sent message | `--chat-sent-foreground` | `--ink`               | `--mist`              |
 
-Use black text on brand pink. Brand pink text doesn't have enough contrast on a light surface, so light-theme links and keyboard focus use deep pink, `--pink-70`.
+Use white text on the primary rose, `--pink-60`. PageLyft's brightest rose, `--brand-pink` (#ff004f), doesn't give white text enough contrast, so keep it for marks without text: the dot in the Nod symbol, status dots and chart fills. Light-theme links and keyboard focus use the deeper `--pink-70`, and dark-theme links use the lighter `--pink-50`. Hovered navigation uses the neutral `--hover` surface, not a rose tint.
 
 | Element                                         | Minimum contrast |
 | ----------------------------------------------- | ---------------- |
@@ -52,11 +52,11 @@ Use black text on brand pink. Brand pink text doesn't have enough contrast on a 
 
 Success (`--success`), warning (`--warning`), error (`--error`) and information (`--info`) are product states, each with a `-soft` background. Always pair them with an icon or text.
 
-Native charts use the [brand's pink and neutral palette](https://guidelines.n8n.design/colors) through `--chart-1` to `--chart-12`. Use `--chart-line-1` to `--chart-line-3` for lines and bar outlines so marks stay readable on light and dark surfaces. Keep category names, values and line styles available; color alone must not identify a series. Maps, diagrams and other native visuals use the same pink selection and neutral surface tokens as the rest of the interface. Reserve success, warning, error and information colors for actual states, not chart categories.
+Native charts use the rose and indigo-neutral palette through `--chart-1` to `--chart-12`. Use `--chart-line-1` to `--chart-line-3` for lines and bar outlines so marks stay readable on light and dark surfaces. Keep category names, values and line styles available; color alone must not identify a series. Maps, diagrams and other native visuals use the same rose selection and neutral surface tokens as the rest of the interface. Reserve success, warning, error and information colors for actual states, not chart categories.
 
 ## Type
 
-The interface uses Geist, and code uses Geist Mono, the same fonts as the n8n editor. Both use the SIL Open Font License and are served locally from `public/fonts`. Use regular weight for body text and medium for headings.
+The interface uses Geist, and code uses Geist Mono. Titles of 20 px and up use Barlow Condensed in semibold, PageLyft's heading face, through `--font-display`. The title rule at the end of `src/web/theme.css` lists them; add a new title there. Smaller headings, the Nod wordmark, figures and anything the owner or the model wrote stay in Geist. All three fonts use the SIL Open Font License and are served locally from `public/fonts`. Use regular weight for body text and medium for headings in Geist.
 
 | Use                         | Size                   | Line height            |
 | --------------------------- | ---------------------- | ---------------------- |
@@ -84,13 +84,13 @@ Leave 8 px before a file preview that follows reply text or an action card in th
 
 ## Icons and brand details
 
-| Item               | Rule                                                                                                                                  |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Icon set           | [n8n icons](https://n8n-icons.vercel.app/) from `src/web/components/icons.tsx`; Lucide only where the set has no icon yet             |
-| Icon sizes         | The 12 px drawing at 14 px and below, the 16 px drawing up to 18 px, scaled to 28 px for sidebar navigation; page titles have no icon |
-| Icon style         | Outline by default, Solid for the selected navigation item; neutral color, pink for selected navigation, state colors on status icons |
-| Connected services | Logos keep their official colors                                                                                                      |
-| Dot grid           | 24 px, only on the sign-in story and the empty conversation. Never in messages, tables, forms, app lists or Settings.                 |
+| Item               | Rule                                                                                                                                                                                                     |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Icon set           | [Lucide](https://lucide.dev/icons/) through `src/web/components/icons.tsx`; add a new icon there, not in a page                                                                                          |
+| Icon sizes         | 16 px by default, 14 px in tight controls, 20 px in larger buttons, 28 px for sidebar navigation; page titles have no icon                                                                               |
+| Icon style         | Outline with a 2 px stroke; a heavier 2.5 px stroke for the selected navigation item; play and stop controls fill their shape; neutral color, rose for selected navigation, state colors on status icons |
+| Connected services | Logos keep their official colors                                                                                                                                                                         |
+| Dot grid           | 24 px, only on the sign-in story and the empty conversation. Never in messages, tables, forms, app lists or Settings.                                                                                    |
 
 Don't show a construction grid. Keep the existing reduced-motion behaviour. The brand guide doesn't define motion for product interfaces yet.
 
@@ -119,14 +119,14 @@ Keep searchable selection in `SearchPicker`. Form popovers, editor tools, emoji 
 
 | Surface                   | Rule                                                                                                               |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Shell                     | Neutral sidebar, pink selection, quiet utility controls                                                            |
-| Chat                      | Neutral received bubbles, pink sent bubbles, readable tables and files                                             |
+| Shell                     | Neutral sidebar, rose selection, quiet utility controls                                                            |
+| Chat                      | Neutral received bubbles, rose sent bubbles, readable tables and files                                             |
 | Composer                  | Clear boundary, visible focus, one primary send action                                                             |
 | Scheduled work            | Shared title, row spacing and action height; each schedule contains its details and run history                    |
 | Apps and channels         | Neutral cards, visible connection state, consistent controls                                                       |
 | Vault                     | Clear selection, fields and error states; secure forms preserved; one summary line and the ways to add while empty |
 | Usage                     | One summary line, one cost card, a quiet statement list                                                            |
-| Sign-in                   | Plain capability text, pink sign-in action, one inset story panel                                                  |
+| Sign-in                   | Plain capability text, rose sign-in action, one inset story panel                                                  |
 | Onboarding                | Clear connection steps, no decorative grid behind fields                                                           |
 | Credentials and approvals | Clear action hierarchy; origin and expiry preserved                                                                |
 | File previews             | One panel beside the chat; quiet header actions; local scrolling                                                   |

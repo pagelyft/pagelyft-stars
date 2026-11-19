@@ -67,7 +67,7 @@ function DataThumbnail({ item, kind }: { item: ImagePreview; kind: DataKind }) {
               item={item}
               kind={kind}
               mode="preview"
-              stage="#f1f1f1"
+              stage="#f4f6fb"
               thumbnail
               onDetail={ignoreDetail}
             />

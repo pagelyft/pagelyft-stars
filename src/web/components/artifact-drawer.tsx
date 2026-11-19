@@ -265,7 +265,7 @@ function ArtifactDrawer({
   modesByFile.current.set(current.id, mode);
   const [copied, setCopied] = useState(false);
   const [closing, setClosing] = useState(false);
-  const [stage, setStage] = useState('#f1f1f1');
+  const [stage, setStage] = useState('#f4f6fb');
   const index = items.indexOf(current);
   const kind = current.presentation ? null : attachmentKind(current.mimeType ?? '', current.name);
   useEffect(() => {
@@ -294,7 +294,7 @@ function ArtifactDrawer({
     const measure = () => setPageWidth(page.clientWidth);
     const paint = () =>
       setStage(
-        getComputedStyle(root.current!).getPropertyValue('--artifact-stage').trim() || '#f1f1f1',
+        getComputedStyle(root.current!).getPropertyValue('--artifact-stage').trim() || '#f4f6fb',
       );
     measure();
     paint();

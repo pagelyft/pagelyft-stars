@@ -84,21 +84,21 @@ export function documentFrame(body: string, stage: string) {
     `<style>
       :root { color-scheme: light; }
       html { background: ${stage}; }
-      body { margin: 0; padding: 32px 24px 56px; color: #191919; font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+      body { margin: 0; padding: 32px 24px 56px; color: #20263d; font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
       main { box-sizing: border-box; max-width: 816px; min-height: calc(100vh - 88px); margin: 0 auto; padding: 72px 80px; background: #fff; border-radius: 4px; box-shadow: 0 1px 2px rgb(0 0 0 / 6%), 0 12px 32px rgb(0 0 0 / 8%); overflow-wrap: anywhere; }
       main > :first-child { margin-top: 0; }
       h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.3; margin: 1.6em 0 0.5em; text-wrap: balance; }
-      h1 { font-size: 28px; } h1.title { font-size: 34px; letter-spacing: -0.01em; margin-bottom: 8px; } .subtitle { color: #676767; font-size: 17px; } h2 { font-size: 22px; } h3 { font-size: 18px; } h4, h5, h6 { font-size: 15px; }
+      h1 { font-size: 28px; } h1.title { font-size: 34px; letter-spacing: -0.01em; margin-bottom: 8px; } .subtitle { color: #5b6485; font-size: 17px; } h2 { font-size: 22px; } h3 { font-size: 18px; } h4, h5, h6 { font-size: 15px; }
       p { margin: 0 0 12px; text-wrap: pretty; }
       ul, ol { margin: 0 0 12px; padding-left: 24px; }
       li { margin: 4px 0; }
-      a { color: #87003c; text-underline-offset: 3px; }
+      a { color: #be123c; text-underline-offset: 3px; }
       img { max-width: 100%; height: auto; }
       table { width: 100%; margin: 16px 0; border-collapse: collapse; font-size: 14px; }
-      th, td { padding: 6px 10px; border: 1px solid #d6d6d6; text-align: left; vertical-align: top; }
-      th { background: #f5f5f5; font-weight: 600; }
+      th, td { padding: 6px 10px; border: 1px solid #d0d6e6; text-align: left; vertical-align: top; }
+      th { background: #f4f6fb; font-weight: 600; }
       td p, th p { margin: 0; }
-      blockquote { margin: 16px 0; padding-left: 16px; border-left: 3px solid #e0e0e0; color: #464646; }
+      blockquote { margin: 16px 0; padding-left: 16px; border-left: 3px solid #dde2ee; color: #3d4567; }
       @media (max-width: 640px) { body { padding: 16px 12px 32px; } main { padding: 32px 24px; } }
     </style>`,
   );

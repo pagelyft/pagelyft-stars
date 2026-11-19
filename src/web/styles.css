@@ -23,6 +23,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: 'Barlow Condensed';
+  src: url('/fonts/BarlowCondensed-SemiBold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Geist Mono';
   src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
   font-style: normal;
@@ -188,6 +195,10 @@ pre {
 }
 svg.lucide {
   stroke-width: 2;
+}
+svg.lucide.icon-solid,
+.nav-link .nav-icon > svg.icon-solid {
+  stroke-width: 2.5;
 }
 button svg,
 a svg {

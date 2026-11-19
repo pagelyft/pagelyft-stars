@@ -464,8 +464,8 @@ function windowsTitleBar(dark) {
     ? {
         titleBarStyle: 'hidden',
         titleBarOverlay: {
-          color: dark ? '#191919' : '#fafafa',
-          symbolColor: dark ? '#fafafa' : '#191919',
+          color: dark ? '#14162e' : '#fbfcfe',
+          symbolColor: dark ? '#ecedfb' : '#20263d',
           height: 48,
         },
       }
@@ -476,7 +476,7 @@ function publishPreferences() {
   const value = publicPreferences();
   for (const window of [setupWindow, ...engineWindows]) {
     if (!window || window.isDestroyed()) continue;
-    window.setBackgroundColor(value.resolvedTheme === 'dark' ? '#191919' : '#fafafa');
+    window.setBackgroundColor(value.resolvedTheme === 'dark' ? '#14162e' : '#fbfcfe');
     if (process.platform === 'win32')
       window.setTitleBarOverlay(windowsTitleBar(value.resolvedTheme === 'dark').titleBarOverlay);
     window.webContents.send('nod:preferences', value);
@@ -981,7 +981,7 @@ function showSettings(section = 'general', loading = false) {
     minWidth: Math.min(700, bounds.width),
     minHeight: Math.min(600, bounds.height),
     title: 'Nod',
-    backgroundColor: nativeTheme.shouldUseDarkColors ? '#191919' : '#fafafa',
+    backgroundColor: nativeTheme.shouldUseDarkColors ? '#14162e' : '#fbfcfe',
     titleBarStyle: process.platform === 'darwin' ? 'hiddenInset' : 'default',
     ...(process.platform === 'darwin' ? { trafficLightPosition: { x: 20, y: 17 } } : {}),
     ...windowsTitleBar(nativeTheme.shouldUseDarkColors),
@@ -1112,7 +1112,7 @@ function showEngine({ focus = true } = {}) {
     minWidth: Math.min(700, bounds.width),
     minHeight: Math.min(600, bounds.height),
     title: 'Nod',
-    backgroundColor: nativeTheme.shouldUseDarkColors ? '#191919' : '#fafafa',
+    backgroundColor: nativeTheme.shouldUseDarkColors ? '#14162e' : '#fbfcfe',
     titleBarStyle: process.platform === 'darwin' ? 'hiddenInset' : 'default',
     ...(process.platform === 'darwin' ? { trafficLightPosition: { x: 20, y: 17 } } : {}),
     ...windowsTitleBar(nativeTheme.shouldUseDarkColors),
